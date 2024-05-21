@@ -3,9 +3,7 @@ package com.example.newco;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.view.View;
-import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,11 +18,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void irIniciarSesion(View view){
-        Intent i = new Intent(getApplicationContext(),iniciarSesion.class);
+        Intent i = new Intent(getApplicationContext(), crear_cuenta.class);
         startActivity(i);
     }
     public void irCrearCuenta(View view){
-        Intent i = new Intent(getApplicationContext(), iniciarSesion1.class);
+        Intent i = new Intent(getApplicationContext(), iniciarSesion.class);
        startActivity(i);
     }
 }
