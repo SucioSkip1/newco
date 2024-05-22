@@ -18,11 +18,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void irIniciarSesion(View view){
-        Intent i = new Intent(getApplicationContext(), crear_cuenta.class);
+        Intent i = new Intent(getApplicationContext(),iniciarSesion.class);
         startActivity(i);
     }
     public void irCrearCuenta(View view){
-        Intent i = new Intent(getApplicationContext(), iniciarSesion.class);
+        Intent i = new Intent(getApplicationContext(), crear_cuenta.class);
        startActivity(i);
     }
 }

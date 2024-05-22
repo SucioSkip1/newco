@@ -22,7 +22,7 @@ public class iniciarSesion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_iniciar_sesion);
-        Objects.requireNonNull(getSupportActionBar()).hide();
+       // Objects.requireNonNull(getSupportActionBar()).hide();
         btnEntrar = findViewById(R.id.btn_iniciarSesion);
         usu=findViewById(R.id.usuario_activity);
         contra=findViewById(R.id.contra_activity);

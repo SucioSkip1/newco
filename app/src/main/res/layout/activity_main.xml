@@ -37,7 +37,7 @@
         style="@style/dise_boton"
 
         android:layout_marginTop="64dp"
-        android:onClick="irCrearCuenta"
+        android:onClick="irIniciarSesion"
         android:text="Iniciar sesión"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
         app:layout_constraintStart_toStartOf="@+id/imageView2"
