@@ -67,7 +67,7 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btn_registrar"
         style="@style/dise_boton"
         android:text="Registrarme"
         app:layout_constraintBottom_toBottomOf="parent"
