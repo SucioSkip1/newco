@@ -1,16 +1,4 @@
 <resources>
-    <string name="app_name">NEWCO</string>
-    <string-array name="TipoDaltonismo">
-        <item>Monocromático</item>
-        <item>Deuteranomalia (Rojo-Verde)</item>
-        <item>Protanomalía (Rojo-Verde)</item>
-        <item>Tritanomalia(Azul-Amarillo)</item>
-    </string-array>
-    <string-array name="Idioma">
-        <item>Español</item>
-        <item>Ruso</item>
-        <item>Ingles</item>
-        <item>Arameo</item>
+    <string name="app_name">DALTOVISION</string>
 
-    </string-array>
 </resources>

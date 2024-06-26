@@ -23,17 +23,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_aplicar"
+        android:id="@+id/btn_Deuteranopia"
         style="@style/dise_boton"
-        android:layout_marginTop="32dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:onClick="openDeveloperOptions"
-        android:text="Aplicar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/spinner2"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/spinner2"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2"
-        app:layout_constraintVertical_bias="0.0" />
+        android:text="Deuteranopia"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -47,29 +46,29 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:srcCompat="@drawable/dalto" />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="379dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="32dp"
-        android:backgroundTint="#000000"
-        android:entries="@array/TipoDaltonismo"
-        android:foregroundTint="#000000"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="379dp"
-        android:layout_height="22dp"
+    <Button
+        android:id="@+id/btn_Protanopia"
+        style="@style/dise_boton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#000000"
-        android:entries="@array/Idioma"
-        android:foregroundTint="#000000"
-        app:layout_constraintEnd_toEndOf="@+id/spinner"
-        app:layout_constraintStart_toStartOf="@+id/spinner"
-        app:layout_constraintTop_toBottomOf="@+id/spinner"
-        tools:ignore="TouchTargetSizeCheck" />
+        android:text="Protanopia"
+        app:layout_constraintEnd_toEndOf="@+id/btn_Deuteranopia"
+        app:layout_constraintStart_toStartOf="@+id/btn_Deuteranopia"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Deuteranopia" />
+
+    <Button
+        android:id="@+id/btn_Tritanopia"
+        style="@style/dise_boton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Tritanopia"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_Protanopia"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_Protanopia"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Protanopia"
+        app:layout_constraintVertical_bias="0.028" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

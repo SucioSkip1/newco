@@ -51,6 +51,7 @@
         android:layout_marginEnd="8dp"
         android:background="@drawable/edittext_back"
         android:gravity="center"
+        android:onClick="ir"
         android:text="Bienvenido"
         android:textColor="#000000"
         android:textSize="18dp"
