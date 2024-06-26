@@ -49,10 +49,7 @@ public class configurarPerfil extends AppCompatActivity {
 
 
     }
-    protected void onResume() {
-        super.onResume();
-        checkOverlayPermission(); // Verificar el permiso de superposición al volver a la actividad principal
-    }
+
     private void checkOverlayPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !Settings.canDrawOverlays(this)) {
             // Si no se puede dibujar sobre otras aplicaciones, solicitar el permiso nuevamente

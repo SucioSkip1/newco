@@ -15,6 +15,7 @@
         android:theme="@style/Theme.NewCo"
         android:usesCleartextTraffic="true"
         >
+        <service android:name=".OverlayService"/>
         <activity
             android:name=".configurarPerfil"
             android:exported="false" />
