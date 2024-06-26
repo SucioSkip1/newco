@@ -101,7 +101,7 @@ protected void onActivityResult(int requestCode, int resultCode, @Nullable Inten
     private void stopOverlayService() {
         Intent intent = new Intent(configurarPerfil.this, OverlayService.class);
         stopService(intent);
-        btn_uno.setText("Aplicar Filtro");
+        btn_uno.setText("Deuteranopia");
     }
 
 }
