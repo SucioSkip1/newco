@@ -2,8 +2,6 @@ package com.example.newco;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
@@ -101,7 +99,7 @@ protected void onActivityResult(int requestCode, int resultCode, @Nullable Inten
     private void stopOverlayService() {
         Intent intent = new Intent(configurarPerfil.this, OverlayService.class);
         stopService(intent);
-        btn_uno.setText("Aplicar Filtro");
+        btn_uno.setText("Deuteranopia");
     }
 
 }
