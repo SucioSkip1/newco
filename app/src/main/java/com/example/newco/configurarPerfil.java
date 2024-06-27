@@ -2,8 +2,6 @@ package com.example.newco;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
