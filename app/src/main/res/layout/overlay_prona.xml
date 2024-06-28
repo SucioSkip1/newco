@@ -7,7 +7,7 @@
         android:id="@+id/filterProna"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#ABDA75"
-        android:scaleType="fitXY" /> <!-- Fondo semi-transparente azul -->
+        android:scaleType="fitXY"
+        android:background="#800000FF" /> <!-- Fondo semi-transparente azul -->
 
 </FrameLayout>

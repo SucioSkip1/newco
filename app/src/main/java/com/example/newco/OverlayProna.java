@@ -1,6 +1,5 @@
 package com.example.newco;
 
-
 import android.app.Service;
 import android.content.Intent;
 import android.graphics.ColorMatrix;
@@ -13,8 +12,10 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.graphics.PixelFormat;
 
-public class OverlayService extends Service {
 
+
+
+public class OverlayProna extends  Service{
     private WindowManager windowManager;
     private View overlayView;
 
@@ -28,7 +29,7 @@ public class OverlayService extends Service {
         super.onCreate();
         windowManager = (WindowManager) getSystemService(WINDOW_SERVICE);
 
-        overlayView = LayoutInflater.from(this).inflate(R.layout.overlay_layout, null);
+        overlayView = LayoutInflater.from(this).inflate(R.layout.overlay_prona, null);
 
         WindowManager.LayoutParams params = new WindowManager.LayoutParams(
                 WindowManager.LayoutParams.MATCH_PARENT,
@@ -48,11 +49,10 @@ public class OverlayService extends Service {
     private void applyBlueEnhancementFilter(ImageView filterView) {
         // Esta matriz de color realza los tonos azules
         ColorMatrix colorMatrix = new ColorMatrix();
-        colorMatrix.setSaturation(0);
         colorMatrix.set(new float[]{
-                0.625f, 0.375f, 0.0f, 0.0f, 0.0f,  // Ajuste del rojo
-                0.7f, 0.3f, 0.0f, 0.0f, 0.0f,  // Ajuste del verde
-                0.0f, 0.3f, 0.7f, 0.0f, 0.0f,  // Ajuste del azul
+                1.0f, 0.0f, 0.0f, 0.0f, 0.0f,
+                0.0f, 1.0f, 0.0f, 0.0f, 0.0f,
+                0.0f, 0.0f, 2.0f, 0.0f, 0.0f, // Duplica la intensidad del azul
                 0.0f, 0.0f, 0.0f, 1.0f, 0.0f
         });
         ColorMatrixColorFilter filter = new ColorMatrixColorFilter(colorMatrix);

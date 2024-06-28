@@ -44,7 +44,36 @@ public class configurarPerfil extends AppCompatActivity {
                 isFilterApplied = !isFilterApplied;
             }
         });
-
+btn_dos.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        if (isFilterApplied) {
+            stopOverlayProna();
+        } else {
+            if (Settings.canDrawOverlays(configurarPerfil.this)) {
+                startOverlayProna();
+            } else {
+                requestOverlayPermission();
+            }
+        }
+        isFilterApplied = !isFilterApplied;
+    }
+});
+        btn_tres.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (isFilterApplied) {
+                    stopOverlayTrina();
+                } else {
+                    if (Settings.canDrawOverlays(configurarPerfil.this)) {
+                        startOverlayTrina();
+                    } else {
+                        requestOverlayPermission();
+                    }
+                }
+                isFilterApplied = !isFilterApplied;
+            }
+        });
 
     }
 
@@ -55,41 +84,31 @@ public class configurarPerfil extends AppCompatActivity {
         } else {
             // Si el permiso está concedido, iniciar el servicio de superposición
             startOverlayService();
+            Toast.makeText(this, "Tiene permiso!", Toast.LENGTH_SHORT).show();
         }
     }
     private void requestOverlayPermission() {
-       /* Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:" + getPackageName()));
-        startActivityForResult(intent, REQUEST_OVERLAY_PERMISSION);*/
         Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
                 Uri.parse("package:" + getPackageName()));
         startActivityForResult(intent, REQUEST_OVERLAY_PERMISSION);
     }
 
 
-/*
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_OVERLAY_PERMISSION) {
-            if (Settings.canDrawOverlays(this)) {
-                startOverlayService();
-            }
-        }
-    }
-    */
+
 protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
     super.onActivityResult(requestCode, resultCode, data);
     if (requestCode == REQUEST_OVERLAY_PERMISSION) {
 
             if (Settings.canDrawOverlays(this)) {
                 // Si el permiso se concedió, iniciar el servicio de superposición
-                startOverlayService();
+                Toast.makeText(this, "Tiene permiso!", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "Permission denied", Toast.LENGTH_SHORT).show();
             }
 
     }
 }
+//Btn Uno
     private void startOverlayService() {
         Intent intent = new Intent(configurarPerfil.this, OverlayService.class);
         startService(intent);
@@ -101,5 +120,29 @@ protected void onActivityResult(int requestCode, int resultCode, @Nullable Inten
         stopService(intent);
         btn_uno.setText("Deuteranopia");
     }
+        //btn dos
+        private void startOverlayProna() {
+            Intent intentProna = new Intent(configurarPerfil.this, OverlayProna.class);
+            startService(intentProna);
+            btn_dos.setText("Eliminar Filtro");
+        }
 
+    private void stopOverlayProna() {
+        Intent intentprona = new Intent(configurarPerfil.this, OverlayProna.class);
+        stopService(intentprona);
+        btn_dos.setText("Pronatopia");
+    }
+    //btn tres
+
+    private void startOverlayTrina() {
+        Intent intentTrina = new Intent(configurarPerfil.this, OverlayProna.class);
+        startService(intentTrina);
+        btn_tres.setText("Eliminar Filtro");
+    }
+
+    private void stopOverlayTrina() {
+        Intent intentTrina = new Intent(configurarPerfil.this, OverlayProna.class);
+        stopService(intentTrina);
+        btn_tres.setText("Trinatopia");
+    }
 }

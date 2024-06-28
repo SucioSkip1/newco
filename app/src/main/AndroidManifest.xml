@@ -16,6 +16,8 @@
         android:usesCleartextTraffic="true"
         >
         <service android:name=".OverlayService"/>
+        <service android:name=".OverlayTrina"/>
+        <service android:name=".OverlayProna"/>
         <activity
             android:name=".configurarPerfil"
             android:exported="false" />
