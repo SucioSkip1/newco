@@ -10,7 +10,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 public class WebServiceInicioSesion {
-    private static final String linkInsertar = "http://192.168.0.29/usu/iser.php";
+    private static final String linkInsertar = "http://192.168.1.12/usu/iser.php";
     public String insertar( String nombre, String apellido, String correo, String password) {
         String aux = "";
         try {
@@ -76,7 +76,7 @@ public class WebServiceInicioSesion {
         return aux;
     }
 
-    private static final String link = "http://192.168.0.29/usu/validar.php";
+    private static final String link = "http://192.168.1.12/usu/validar.php";
     public static String login(String usu, String pass) {
         String response = "";
         try {

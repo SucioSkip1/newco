@@ -7,6 +7,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -18,6 +20,7 @@ public class iniciarSesion extends AppCompatActivity {
             WebServiceInicioSesion obj = new WebServiceInicioSesion();
             Button btnEntrar;
             EditText usu,contra;
+    final Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,13 +41,22 @@ public class iniciarSesion extends AppCompatActivity {
     }
     //Metodo login
     private void login (String usuario, String contraseña){
-        if (usuario.isEmpty()||contraseña.isEmpty()){
+        if (usuario.isEmpty()||contraseña.isEmpty())
+        {
+        usu.setError("Falta Usuario");
+        contra.setError("Ingrese una contraseña");
+            anima();
+
 
         }
         else{
             new LoginTask().execute(usuario,contraseña);
         }
 
+    }
+    public void anima(){
+        usu.startAnimation(shake);
+        contra.startAnimation(shake);
     }
     public void irCrearCuenta(View view) {
         //Intent i = new Intent(getApplicationContext(),activity_crear_cuenta.class);
