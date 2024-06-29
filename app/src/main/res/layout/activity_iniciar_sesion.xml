@@ -48,7 +48,7 @@
 
     <EditText
         android:id="@+id/usuario_activity"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:drawableEnd="@drawable/ic_nom"
@@ -64,7 +64,7 @@
 
     <EditText
         android:id="@+id/contra_activity"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:drawableEnd="@drawable/ic_con"

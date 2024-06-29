@@ -26,7 +26,8 @@ public class iniciarSesion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_iniciar_sesion);
          //Animation mov = AnimationUtils.loadAnimation(this, R.anim.shake); // Inicializar la animación
-//       Objects.requireNonNull(getSupportActionBar()).hide();
+//
+
         btnEntrar = findViewById(R.id.btn_iniciarSesion);
         usu=findViewById(R.id.usuario_activity);
         contra=findViewById(R.id.contra_activity);

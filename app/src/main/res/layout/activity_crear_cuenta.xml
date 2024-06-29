@@ -38,7 +38,7 @@
 
     <EditText
         android:id="@+id/txt_usuario"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
@@ -73,7 +73,7 @@
 
     <EditText
         android:id="@+id/txt_contraseña"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:drawableStart="@drawable/ic_con"
@@ -89,7 +89,7 @@
 
     <EditText
         android:id="@+id/correo"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:drawableStart="@drawable/ic_corr"
@@ -106,7 +106,7 @@
 
     <EditText
         android:id="@+id/txt_confirma_contraseña"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:drawableStart="@drawable/ic_con"
@@ -122,7 +122,7 @@
 
     <EditText
         android:id="@+id/txt_apellido"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:drawableStart="@drawable/ic_nom"
