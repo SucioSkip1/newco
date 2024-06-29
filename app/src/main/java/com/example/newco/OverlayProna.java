@@ -57,7 +57,7 @@ public class OverlayProna extends  Service{
         });
         ColorMatrixColorFilter filter = new ColorMatrixColorFilter(colorMatrix);
         filterView.setColorFilter(filter);
-        filterView.setBackgroundColor(0x800000FF);  // Semi-transparent blue overlay to enhance visibility
+        filterView.setBackgroundColor(0x80FFA500);  // Semi-transparent blue overlay to enhance visibility
     }
 
     @Override

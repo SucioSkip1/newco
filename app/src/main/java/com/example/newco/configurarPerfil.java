@@ -135,13 +135,13 @@ protected void onActivityResult(int requestCode, int resultCode, @Nullable Inten
     //btn tres
 
     private void startOverlayTrina() {
-        Intent intentTrina = new Intent(configurarPerfil.this, OverlayProna.class);
+        Intent intentTrina = new Intent(configurarPerfil.this, OverlayTrina.class);
         startService(intentTrina);
         btn_tres.setText("Eliminar Filtro");
     }
 
     private void stopOverlayTrina() {
-        Intent intentTrina = new Intent(configurarPerfil.this, OverlayProna.class);
+        Intent intentTrina = new Intent(configurarPerfil.this, OverlayTrina.class);
         stopService(intentTrina);
         btn_tres.setText("Trinatopia");
     }

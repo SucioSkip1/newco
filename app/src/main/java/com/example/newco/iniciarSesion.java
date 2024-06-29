@@ -20,15 +20,17 @@ public class iniciarSesion extends AppCompatActivity {
             WebServiceInicioSesion obj = new WebServiceInicioSesion();
             Button btnEntrar;
             EditText usu,contra;
-    final Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
+    Animation mov;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_iniciar_sesion);
+         //Animation mov = AnimationUtils.loadAnimation(this, R.anim.shake); // Inicializar la animación
 //       Objects.requireNonNull(getSupportActionBar()).hide();
         btnEntrar = findViewById(R.id.btn_iniciarSesion);
         usu=findViewById(R.id.usuario_activity);
         contra=findViewById(R.id.contra_activity);
+        mov = AnimationUtils.loadAnimation(this, R.anim.shake);
         btnEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,9 +56,11 @@ public class iniciarSesion extends AppCompatActivity {
         }
 
     }
-    public void anima(){
-        usu.startAnimation(shake);
-        contra.startAnimation(shake);
+    public void anima() {
+        if (usu != null && contra != null && mov != null) { // Verificar si los campos y la animación no son nulos
+            usu.startAnimation(mov); // Iniciar la animación en usu
+            contra.startAnimation(mov); // Iniciar la animación en contra
+        }
     }
     public void irCrearCuenta(View view) {
         //Intent i = new Intent(getApplicationContext(),activity_crear_cuenta.class);
